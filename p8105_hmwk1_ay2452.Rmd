@@ -43,3 +43,15 @@ pull(problem1_df,norm_samp)*ac
 ad = as.numeric(ac)
 pull(problem1_df,norm_samp)*ad
 ```
+
+```{r problem 2.1}
+set.seed(1000)
+
+problem2_df = tibble(
+  x = rnorm(500),
+  y = rnorm(500),
+  z = c(x + y > 1),
+  z_numeric = as.numeric(z),
+  z_factor = as.factor(z)
+)
+```
