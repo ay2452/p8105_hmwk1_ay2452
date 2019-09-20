@@ -17,9 +17,20 @@ problem1_df = tibble(
   c_factor = factor(c("small", "medium", "big", "small", "medium", "big", "small", "medium" ), 
     levels = 1:3, labels = c("small", "medium", "big"))
 )
+```
 
+```{r problem 1.2 taking mean of variables}
 mean(pull(problem1_df,a_samp_pos))
 mean(pull(problem1_df,b_char))
 mean(pull(problem1_df,c_factor))
 ##Taking the mean of the logical vector works but taking the mean of the character and factor variables does not; the error says that the 'argument is not numeric or logical'
+```
+
+
+```{r problem 1.3 converting to numeric, eval = FALSE}
+as.numeric(pull(problem1_df,a_samp_pos))
+as.numeric(pull(problem1_df,b_char))
+as.numeric(pull(problem1_df,c_factor)) 
+##Only the logical vector is able to be converted to a numeric vector because the other vectors do not consist of numbers. 
+##This helps explain why taking the mean of the character and factor variables does not work since again, those vectors are not made of numbers.
 ```
