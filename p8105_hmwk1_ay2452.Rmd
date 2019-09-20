@@ -17,4 +17,9 @@ problem1_df = tibble(
   c_factor = factor(c("small", "medium", "big", "small", "medium", "big", "small", "medium" ), 
     levels = 1:3, labels = c("small", "medium", "big"))
 )
+
+mean(pull(problem1_df,a_samp_pos))
+mean(pull(problem1_df,b_char))
+mean(pull(problem1_df,c_factor))
+##Taking the mean of the logical vector works but taking the mean of the character and factor variables does not; the error says that the 'argument is not numeric or logical'
 ```
